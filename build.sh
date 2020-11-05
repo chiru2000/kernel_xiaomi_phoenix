@@ -17,7 +17,7 @@ fi
 KERNEL_DEFCONFIG=phoenix_defconfig
 ANYKERNEL3_DIR=$PWD/anykernel/
 KERNELDIR=$PWD/
-FINAL_KERNEL_ZIP=Optimus_Drunk_Phoenix_v11.1.zip
+FINAL_KERNEL_ZIP=DuskMane_v1.0.zip
 export PATH="${PWD}/clang/bin:${PATH}"
 export ARCH=arm64
 export SUBARCH=arm64
