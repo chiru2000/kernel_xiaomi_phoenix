@@ -1,15 +1,27 @@
-#!/bin/bash
 
 #set -e
 
+if [ -r clang ]; then
+  echo clang found! check for update...
+  cd clang
+  git pull
+  cd ..
+
+else
+  echo clang not found!, git cloning it now....
+  git clone https://github.com/kdrag0n/proton-clang.git clang
+
+fi
+
 ## Copy this script inside the kernel directory
 KERNEL_DEFCONFIG=phoenix_defconfig
-ANYKERNEL3_DIR=$PWD/AnyKernel3/
-FINAL_KERNEL_ZIP=Optimus_Drunk_Phoenix_v11.0.zip
-export PATH="$KERNELDIR/prebuilts/proton-clang/bin:${PATH}"
+ANYKERNEL3_DIR=$PWD/anykernel/
+KERNELDIR=$PWD/
+FINAL_KERNEL_ZIP=Optimus_Drunk_Phoenix_v11.1.zip
+export PATH="${PWD}/clang/bin:${PATH}"
 export ARCH=arm64
 export SUBARCH=arm64
-export KBUILD_COMPILER_STRING="$($KERNELDIR/prebuilts/proton-clang/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
+export KBUILD_COMPILER_STRING="$(${PWD}/clang/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
 # Speed up build process
 MAKE="./makeparallel"
 
