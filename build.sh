@@ -15,7 +15,7 @@ fi
 
 ## Copy this script inside the kernel directory
 KERNEL_DEFCONFIG=phoenix_defconfig
-ANYKERNEL3_DIR=$PWD/anykernel/
+ANYKERNEL3_DIR=$PWD/AnyKernel3/
 KERNELDIR=$PWD/
 FINAL_KERNEL_ZIP=DuskMane_v1.0.zip
 export PATH="${PWD}/clang/bin:${PATH}"
