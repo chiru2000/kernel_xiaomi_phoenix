@@ -1,5 +1,8 @@
 ## Copy this script inside the kernel directory
 
+echo checking for repo update
+git pull
+
 #clone or update clang if its alreay exists
 set -e
 
