@@ -1,6 +1,7 @@
 ## Copy this script inside the kernel directory
 
 echo checking for repo update
+git config pull.rebase false
 git pull
 
 #clone or update clang if its alreay exists
