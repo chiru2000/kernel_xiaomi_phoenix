@@ -1,5 +1,7 @@
+## Copy this script inside the kernel directory
 
-#set -e
+#clone or update clang if its alreay exists
+set -e
 
 if [ -r clang ]; then
   echo clang found! check for update...
@@ -13,7 +15,6 @@ else
 
 fi
 
-## Copy this script inside the kernel directory
 KERNEL_DEFCONFIG=phoenix_defconfig
 ANYKERNEL3_DIR=$PWD/AnyKernel3/
 KERNELDIR=$PWD/
