@@ -42,12 +42,6 @@ static DEFINE_MUTEX(zram_index_mutex);
 
 static int zram_major;
 
-#ifdef CONFIG_CRYPTO_LZ4
-static const char *default_compressor = "lz4";
-#else
-static const char *default_compressor = "lzo-rle";
-#endif
-
 static const char *default_compressor = CONFIG_ZRAM_DEFAULT_COMP_ALGORITHM;
 
 /* Module params (documentation at end) */
