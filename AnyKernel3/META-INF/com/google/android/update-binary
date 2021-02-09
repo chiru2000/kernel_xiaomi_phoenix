@@ -24,9 +24,6 @@ ui_print() {
   done;
 }
 
-ui_print "------W A R P  K E R N E L------"
-ui_print "-----KERNEL BY TEAM WARP-----"
-
 ui_printfile() {
   while IFS='' read -r line || $BB [[ -n "$line" ]]; do
     ui_print "$line";
@@ -451,5 +448,3 @@ restore_env;
 if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
-
-ui_print " " "THANK YOU FOR USING W A R P-K E R N E L";

@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=kernel By Chiranth
+kernel.string=Neon kernel By Chiranth
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
